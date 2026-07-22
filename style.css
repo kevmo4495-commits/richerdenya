@@ -551,3 +551,37 @@ nav {
 }
 
 }
+.cart-page{
+
+padding:180px 10%;
+text-align:center;
+
+}
+
+
+.cart-page h1{
+
+font-family:"Cormorant Garamond";
+font-size:90px;
+letter-spacing:8px;
+
+}
+
+
+#cart-items{
+
+margin:50px;
+font-size:20px;
+color:#ccc;
+
+}
+
+
+.cart-page button{
+
+padding:18px 50px;
+background:white;
+border:none;
+letter-spacing:3px;
+
+}
