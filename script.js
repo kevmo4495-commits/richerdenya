@@ -171,5 +171,5 @@ alert(
 }
 
 
-
+function addToCart(name, price){
 loadCart();
