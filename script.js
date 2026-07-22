@@ -85,3 +85,91 @@ if (countdown) {
     countdown.innerHTML = `${days} : ${hours} : ${minutes} : ${seconds}`;
   }, 1000);
 }
+// CART SYSTEM
+
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+
+function addToCart(name, price){
+
+cart.push({
+name:name,
+price:price
+});
+
+
+localStorage.setItem(
+"cart",
+JSON.stringify(cart)
+);
+
+
+alert(name + " added to cart");
+
+}
+
+
+
+
+function loadCart(){
+
+let container =
+document.getElementById("cart-items");
+
+
+let total =
+document.getElementById("cart-total");
+
+
+if(!container) return;
+
+
+let sum = 0;
+
+
+container.innerHTML="";
+
+
+cart.forEach(item=>{
+
+
+let product =
+document.createElement("p");
+
+
+product.innerHTML =
+item.name +
+" — $" +
+item.price;
+
+
+container.appendChild(product);
+
+
+sum += item.price;
+
+
+});
+
+
+total.innerHTML =
+"Total: $" + sum;
+
+
+}
+
+
+
+function checkout(){
+
+alert(
+"Checkout coming soon — RicherDenya"
+);
+
+}
+
+
+
+loadCart();
